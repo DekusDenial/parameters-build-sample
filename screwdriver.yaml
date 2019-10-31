@@ -14,4 +14,4 @@ jobs:
             - param_values1: meta get parameters
             - param_values2: meta get parameters.region
             - param_values3: meta get parameters.az
-            - meta: meta get -j json
+            - meta: meta get -j parameters
