@@ -2,10 +2,12 @@ shared:
     image: node:8
 
 parameters:
-    region: "us-west-1"
-    az:
-        value: "1"
-        description: "default availability zone"
+    aws:
+        region: "us-west-1"
+        az:
+            value: "1"
+            description: "default availability zone"
+        blob: '{"az":"1","region":"us-west-1"}'
 
 jobs:
     main:
@@ -14,4 +16,7 @@ jobs:
             - param_values1: meta get parameters
             - param_values2: meta get parameters.region
             - param_values3: meta get parameters.az
+            - param_values4: meta get parameters.blob.value
+            - param_values5: meta get parameters.blob.value.region
             - meta: meta get -j parameters
+            - meta_get: meta get -j parameters.blob.value.region
