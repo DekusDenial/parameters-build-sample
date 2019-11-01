@@ -2,12 +2,11 @@ shared:
     image: node:8
 
 parameters:
-    aws:
-        region: "us-west-1"
-        az:
-            value: "1"
-            description: "default availability zone"
-        blob: '{"az":"1","region":"us-west-1"}'
+    region: "us-west-1"
+    az:
+        value: "1"
+        description: "default availability zone"
+    blob: '{"az":"1","region":"us-west-1"}'
 
 jobs:
     main:
