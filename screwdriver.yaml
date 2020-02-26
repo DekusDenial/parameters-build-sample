@@ -10,7 +10,7 @@ parameters:
 
 jobs:
     quick:
-        requires: [sd@1890:quick]
+        requires: [~sd@1890:quick]
         steps:
             - env: env
     main:
