@@ -9,6 +9,10 @@ parameters:
     blob: '{"az":"1","region":"us-west-1"}'
 
 jobs:
+    quick:
+        requires: [sd@1890:quick]
+        steps:
+            - env: env
     main:
         requires: [~pr, ~commit]
         steps:
