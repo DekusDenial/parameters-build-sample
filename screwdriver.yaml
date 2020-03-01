@@ -17,6 +17,7 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - echo: |
+                sh --version
                 echo $'a\tb\nc'
                 echo -e $'a\tb\nc'
                 echo $"a\tb\nc"
