@@ -17,11 +17,13 @@ jobs:
         requires: [~pr, ~commit]
         steps:
             - echo: |
-                sh --version
                 echo $'a\tb\nc'
                 echo -e $'a\tb\nc'
                 echo $"a\tb\nc"
                 echo -e $"a\tb\nc"
+                env
+                bash --version
+                sh --version
             - param_values1: meta get parameters
             - param_values2: meta get parameters.region
             - param_values3: meta get parameters.az
