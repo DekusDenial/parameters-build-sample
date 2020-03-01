@@ -16,6 +16,9 @@ jobs:
     main:
         requires: [~pr, ~commit]
         steps:
+            - echo: |
+                echo $'a\tb\nc'
+                echo $"a\tb\nc"
             - param_values1: meta get parameters
             - param_values2: meta get parameters.region
             - param_values3: meta get parameters.az
